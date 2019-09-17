@@ -1,5 +1,7 @@
 <template>
-    <pg2></pg2>
+    <div>
+        <pg2></pg2>
+    </div>
 </template>
 
 <script>

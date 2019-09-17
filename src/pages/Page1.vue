@@ -1,5 +1,8 @@
 <template>
-    <pg1></pg1>
+    <div>
+        <pg1></pg1>
+        <router-view/>
+    </div>
 </template>
 
 <script>
