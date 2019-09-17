@@ -7,7 +7,7 @@
         name: "page2",
         data(){
             return{
-                b:'Test 1'
+                b:'Test-1'
             }
         }
     }
