@@ -27,20 +27,16 @@ module.exports = merge(baseConfig, {
     rules: [
       {
         test: /\.css?$/,
-        // use: [
-        //   MiniCssExtractPlugin.loader,
-        //   'vue-style-loader',
-        //   'css-loader'
-        // ]
         use:[
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: false
-            }
-          },
-            //  'style-loader',
+          // MiniCssExtractPlugin.loader,
+          // {
+          //   loader: 'css-loader',
+          //   options: {
+          //     url: false
+          //   }
+          // },
+          'vue-style-loader',
+          'css-loader',
         ]
       }, {
         test: /\.styl(us)?$/,
@@ -60,7 +56,7 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'focus.index.[contenthash:8].css'
+      filename: 'style/focus.index.[contenthash:8].css'
     })
   ]
 })
