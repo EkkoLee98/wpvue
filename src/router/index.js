@@ -21,6 +21,20 @@ const routes = [
     }]
   }
 ]
+// routes:[
+//   {
+//     path: '/',
+//     component: Vue
+//   },
+//   {
+//     path:'/a',
+//     component: Page1,
+//     children:[{
+//       path:'b',
+//       component:Page2
+//     }]
+//   }
+// ]
 
 export default new Router({
   routes
