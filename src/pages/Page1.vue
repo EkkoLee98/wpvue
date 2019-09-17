@@ -1,21 +1,46 @@
 <template>
-    <div>
-        <pg1></pg1>
+    <div id="a">
         <router-view/>
+        <Header></Header>
+        <todo></todo>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
     import Pg1 from '../components/page1'
+    import Header from '../components/header'
+    import Footer from '../components/footer.jsx'
+    import Todo from '../components/todo'
+    import '../assets/styles/global.styl'
 
     export default {
         name: "Page1",
         components:{
-            pg1:Pg1
+            pg1:Pg1,
+            Header,
+            Footer,
+            Todo,
         }
     }
 </script>
 
 <style scoped>
-
+    #a{
+        position:absolute;
+        left: 0;
+        right: 0;
+        top :0;
+        bottom: 0;
+    }
+    #cover{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #999;
+        opacity :.9;
+        z-index: -1;
+    }
 </style>
