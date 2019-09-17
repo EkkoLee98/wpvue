@@ -1,9 +1,12 @@
 <template>
     <div id="a">
         <router-view/>
-        <Header></Header>
-        <todo></todo>
-        <Footer></Footer>
+        <h-eader></h-eader>
+        <t-odo></t-odo>
+        <f-ooter></f-ooter>
+<!--        <Header></Header>-->
+<!--        <todo></todo>-->
+<!--        <Footer></Footer>-->
     </div>
 </template>
 
@@ -18,9 +21,9 @@
         name: "Page1",
         components:{
             pg1:Pg1,
-            Header,
-            Footer,
-            Todo,
+            'h-eader':Header,
+            'f-ooter':Footer,
+            't-odo':Todo,
         }
     }
 </script>
