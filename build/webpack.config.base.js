@@ -22,10 +22,18 @@ module.exports = {
         test: /\.vue$/,
         use: 'vue-loader'
       }, {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', {
+              "plugins": [
+                "transform-vue-jsx"
+              ]
+            }
+            ]
+          }
         }
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
