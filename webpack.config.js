@@ -19,7 +19,13 @@ module.exports={
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
+                use: 'vue-loader'
+            }, {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                }
             },
             {
                 test: /\.css$/,
