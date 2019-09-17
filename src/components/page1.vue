@@ -7,7 +7,7 @@
         name: "page1",
         data(){
             return{
-                a:'master test'
+                a:'Test-master'
             }
         }
     }
