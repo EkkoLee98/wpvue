@@ -28,21 +28,26 @@ module.exports = merge(baseConfig, {
       {
         test: /\.css?$/,
         use:[
-          // MiniCssExtractPlugin.loader,
-          // {
-          //   loader: 'css-loader',
-          //   options: {
-          //     url: false
-          //   }
-          // },
           'vue-style-loader',
-          'css-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          },
         ]
       }, {
         test: /\.styl(us)?$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
+           'vue-style-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          },
           {
             loader:'postcss-loader',
             options:{
@@ -56,7 +61,7 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style/focus.index.[contenthash:8].css'
+      filename: 'focus.index.[contenthash:8].css'
     })
   ]
 })

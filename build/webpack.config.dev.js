@@ -43,13 +43,23 @@ module.exports = merge(baseConfig, {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          },
         ]
       }, {
         test: /\.styl(us)?$/,
         use: [
           'vue-style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          },
           {
             loader:'postcss-loader',
             options:{
