@@ -2,6 +2,8 @@
     <div>
         <pg2></pg2>
         <input v-model="message" placeholder="edit me"/>
+        <span v-text="$t('nav.home')"></span>
+        <span>{{$t('nav.home')}}</span>
     </div>
 </template>
 
