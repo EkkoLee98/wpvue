@@ -4,6 +4,10 @@
         <input v-model="message" placeholder="edit me"/>
         <span v-text="$t('nav.home')"></span>
         <span>{{$t('nav.home')}}</span>
+        <p>
+            <el-button type="primary" @click="changeType()">切换语言</el-button>
+            <button type="primary">aa</button>
+        </p>
     </div>
 </template>
 
@@ -35,6 +39,15 @@
                     this.message=this.users.username;
                 })
             },
+            changeType(){
+                console.log(this.$i18n.locale);
+                console.log("aaa");
+                if(this.$i18n.locale==="zh"){
+                    this.$i18n.locale="en";
+                }else{
+                    this.$i18n.locale="zh";
+                }
+            }
         },
         mounted() {
             this.aa();
