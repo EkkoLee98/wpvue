@@ -24,7 +24,7 @@
  /*    color: aqua;*/
  /*}*/
  #cover{
-     position: absolute;
+     position: fixed;
      left: 0;
      top: 0;
      right: 0;
