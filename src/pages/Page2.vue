@@ -5,8 +5,8 @@
         <span v-text="$t('nav.home')"></span>
         <span>{{$t('nav.home')}}</span>
         <p>
-            <el-button type="primary" @click="changeType()">切换语言</el-button>
-            <button type="primary">aa</button>
+            <button type="primary" @click="changeType()">切换语言</button>
+
         </p>
     </div>
 </template>
