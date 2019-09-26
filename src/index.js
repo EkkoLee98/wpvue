@@ -10,7 +10,7 @@ Vue.use(VueI18n); // 通过插件的形式挂载
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;//使用axios
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
-Vue.use(axios);
+
 new Vue({
     render:(h)=>h(App),
     i18n,
